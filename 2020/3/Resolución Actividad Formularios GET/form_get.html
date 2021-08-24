@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario GET</title>
+	</head>
+
+	<body>
+
+		<form action="form_get_server.php" method="GET">
+			<table>
+				<tr>
+					<td>
+						<label>Nombre:</label>
+						<input type="text" name="name"></input>
+						<label>Apellidos:</label>
+						<input type="text" name="surname"></input>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Correo electrónico:</label>
+						<input type="email" name="email"></input>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Población:</label>
+						<input type="text" name="population"></input>
+						<label>Provincia:</label>
+						<input type="text" name="province"></input>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Edad:</label>
+						<br>
+						<input type="radio" id="age1" name="age" value="20">
+						<label for="age1">0-20</label>
+						<br>
+						<input type="radio" id="age2" name="age" value="40">
+						<label for="age2">20-40</label>
+						<br>  
+						<input type="radio" id="age3" name="age" value="60">
+						<label for="age3">40-60</label>
+						<br>
+						<input type="radio" id="age4" name="age" value="100">
+						<label for="age4">60-100</label>
+						<br>
+					</td>	
+				</tr>
+
+				<tr>
+					<td>
+						<label>Cómo nos conociste?</label>
+						<br>
+						<input type="checkbox" id="recomendation1" name="recomendation1" value="friend">
+						<label for="recomendation1">A través de un amigo.</label>
+						<br>
+						<input type="checkbox" id="recomendation2" name="recomendation2" value="search">
+						<label for="recomendation2">A través de un buscador.</label>
+						<br>
+						<input type="checkbox" id="recomendation3" name="recomendation3" value="browser">
+						<label for="recomendation3">Navegando por la red.</label>
+						<br>
+						<input type="checkbox" id="recomendation4" name="recomendation4" value="others">
+						<label for="recomendation4">Otros.</label><br>
+						<br>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Opinión sobre nuestra página web</label>
+						<br>
+						<textarea name="opinion">Escribe...</textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Tienes alguna sugerencia...</label>
+						<br>
+						<textarea name="sugerence">Escribe tus sugerencias...</textarea>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Cuánto navegas por Internet? (Señala la opción más aproximada)</label>
+						<br>
+						<select name="browserTime">
+							<option value="2">2 horas al día.</option>
+							<option value="4">4 horas al día.</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<input type="submit" value="Enviar formulario"></input>
+						<input type="reset" value="Borrar formulario"></input>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+	</body>
+</html>

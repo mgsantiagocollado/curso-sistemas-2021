@@ -1,0 +1,88 @@
+Actividad de Integración
+========================
+
+A partir de la actividad individual 2, se desarrollará el proceso inverso.
+Dada la estructura de datos, se quiere construir la representación visual en HTML.
+
+La solución es dependiente de las decisiones puntuales que se tomen, aquí abordaremos
+el análisis en función de diferentes estrategias de representar la información de la tabla dada.
+
+Por otro lado, la creación de la representación visual, también tiene varios enfoques posibles.
+Aquí utilizaremos el enfoque (3) de "Incrustado de código HTML generado desde JavaScript".
+
+Otros enfoques posibles son:
+
+1) Construcción de archivos HTML y Composición con JavaScript (Vigente, pero con prácticas obsoletas)
+2) Construcción de código HTML generado desde el lado del servidor (Obsoleto)
+3) Incrustación de código HTML generado por JavaScript
+4) Incrustación de nodos DOM generados por JavaScript
+5) Construcción de WebComponents (DOM API avanzado)
+5) Utilización de Frameworks HTML/CSS/JSS híbridos.
+
+
+Estrategia 1
+=============
+
+Utilizar información disociada suelta:
+(Se construye un array por cada fila de la tabla)
+
+let temp_max_abs = [39.3, 38.1, 36.3, 27.4 ];
+let temp_min_abs = [39.3, 38.1, 36.3, 27.4 ];
+let temp_media = [39.3, 38.1, 36.3, 27.4 ];
+
+//..etc 
+
+
+Estrategia 2
+============
+
+Utilizar información asociada en forma de matriz:
+(Se construye un array cuyas componentes son arrays de datos)
+
+let tabla = 
+[
+	[ 'Mes', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo' ],
+	[ 'Temperatura Máx Abs (ºC)', 39.3, 38.1, 36.3, 32.5, 27.4 ],
+	[ 'Temperatura Min Abs (ºC)', 26.3, 25.8, 23.7, 20.5, 16.8 ]
+	//..etc..
+]
+
+
+Estrategia 3
+============
+
+Asociación de la estrategia 1 en una única instancia de datos:
+(Se construye una instancia de objeto que aglutina cada array)
+
+let tabla =
+{
+	temp_max_abs: [39.3, 38.1, 36.3, 27.4 ],
+	temp_min_abs: [39.3, 38.1, 36.3, 27.4 ],
+	temp_media: [39.3, 38.1, 36.3, 27.4 ],
+	//..etc..
+}
+
+Estrategia 4
+============
+
+Utilizar un objeto donde cada columna se expresa como una clave
+y cuyos valores son una lista de propiedades.
+
+let tabla =
+{
+	enero:
+	{
+		temp_max_abs: 39.3,
+		temp_min_abs: 39.3,
+		temp_media: 39.3
+		//..etc..
+	},
+	febrero:
+	{
+		temp_max_abs: 39.3,
+		temp_min_abs: 39.3,
+		temp_media: 39.3
+		//..etc..
+	}
+	//..etc..
+}

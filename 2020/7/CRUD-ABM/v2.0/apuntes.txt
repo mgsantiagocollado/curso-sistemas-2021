@@ -1,0 +1,30 @@
+ABM
+CRUD
+
+Concepto:
+Es un conjunto de funcionalidades que responden a 4 manipulaciones básicas de la información
+a) Consultar / Pedir
+b) Agregar información
+c) Editar la información
+d) Eliminar información
+
+(*) Trabajan en el lado del Servidor
+
+En la actividad anterior:
+Hicimos una consulta muy simple y elemental 
+a) La petición no tenía ningún cuerpo.
+
+El cliente:
+Dispara las peticiones correspondientes para efectuar cualquiera de estas 4 funcionalidades
+que operan sobre la información, y en consecuencia, impactan modificaciones en la interfaz gráfica.
+
+Esquema cerrado de comunicación entre el cliente y el servidor:
+1) El cliente dispara la solicitud al servidor (Ej: Borrar)
+2) El servidor efectúa la operación, mientras que el cliente aguarda la notificación de que su petición
+ha sido concluída.
+3) a) Si el servidor responde. Si lo hace, debemos chequear que el estado es satisfactorio (HTTP:200)
+   y luego, efectuar la actualización del elemento gráfico en pantalla.
+   b) Si el servidor no responde (HTTP:500), entonces también contestamos en pantalla. Con mensajes de error.
+
+WebSocket
+Artimañana de notificaciones PUSH

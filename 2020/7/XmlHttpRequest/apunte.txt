@@ -1,0 +1,46 @@
+Pasando en limpio
+=================
+
+Objetivo: "Hacer una petición al servidor, desde JavaScript"
+Propósito: hacernos de la respuesta, procesarla, para luego interactuar con la interfaz gráfica en HTML.
+
+Implementación JS
+=================
+
+1) Especificar el método de intercambio de información vía HTTP
+Como vimos en los formularios HTML ( GET, POST... otros )
+
+2) Identificamos el recurso del servidor al que vamos a efectuar la petición: URL!!! Link
+
+PLANETA HTML:
+<form action="URL" method="GET">
+
+PLANETA JS:
+let request = new XMLHttpRequest();
+request.open('GET', 'URL');
+
+3) Armar el cuerpo del mensaje que vamos a enviar.
+
+PLANETA HTML:
+
+Se corresponde con los <input> <-- de los input, se extrae la información
+para conformar el cuerpo de la petición que se hace al servidor
+
+PLANETA JS:
+(Todavía no lo hicimos)
+
+4) Envía la petición al servidor 
+
+PLANETA HTML:
+<input type="submit"> <--- click al botón de envío de formulario.
+
+PLANETA JS:
+request.send();	
+
+
+=======
+Formularios HTML (Siempre son Sincrónicos.)
+Recargan siempre toda la página al recibir la respuesta.
+
+En cambio en JS.. No recargan. (Es mucho más flexible.)
+
